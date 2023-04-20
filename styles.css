@@ -126,14 +126,21 @@ body {
   margin: 5px;
 }
 
-.layout-container {
-}
-
-.tags {
-}
-
 /*  ---- end exercise 4 ----  */
 
 /*  ---- start exercise 5 ----  */
+
+.layout-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.layout-container .tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 /*  ---- end exercise 5 ----  */
