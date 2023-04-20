@@ -34,6 +34,11 @@ body {
 /*  ---- start exercise 1 ----  */
 
 .grid-1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  padding: 5px;
 }
 
 /*  ---- end exercise 1 ----  */
@@ -42,29 +47,53 @@ body {
 
 .grid-2 {
   display: grid;
+  grid-auto-flow: column;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 100px 100px 100px;
   gap: 10px;
+  padding: 5px;
 }
 
 .item1 {
   background-color: rgba(74, 102, 112, 0.7);
   border: 5px solid rgba(74, 102, 112, 1);
+  grid-area: 1 / 1 / 3 / span 3;
 }
 
 .item2 {
   background-color: rgba(214, 162, 173, 0.7);
   border: 5px solid rgba(214, 162, 173, 1);
+  grid-area: 2 / 2 / 4 / span 4;
 }
 
 /*  ---- end exercise 2 ----  */
 
 /*  ---- start exercise 3 ----  */
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+}
 
 .grid-3 {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 10px;
+  gap: 20px;
+  grid-template-areas:
+    'one one'
+    'two three'
+    '... four';
+  padding: 5px;
 }
 
 /*  ---- end exercise 3 ----  */
@@ -97,14 +126,21 @@ body {
   margin: 5px;
 }
 
-.layout-container {
-}
-
-.tags {
-}
-
 /*  ---- end exercise 4 ----  */
 
 /*  ---- start exercise 5 ----  */
+
+.layout-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.layout-container .tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 /*  ---- end exercise 5 ----  */
