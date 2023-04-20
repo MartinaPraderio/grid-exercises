@@ -69,11 +69,31 @@ body {
 /*  ---- end exercise 2 ----  */
 
 /*  ---- start exercise 3 ----  */
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+}
 
 .grid-3 {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 10px;
+  gap: 20px;
+  grid-template-areas:
+    'one one'
+    'two three'
+    '... four';
+  padding: 5px;
 }
 
 /*  ---- end exercise 3 ----  */
